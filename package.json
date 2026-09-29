@@ -1,0 +1,27 @@
+{
+  "name": "campus-360",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Campus 360 - Enterprise School ERP Full-Stack Application",
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "dev:all": "npx concurrently -n \"API,VITE\" -c \"cyan,magenta\" \"npm run server\" \"npm run frontend\"",
+    "server": "node backend/server.js",
+    "db:setup": "node backend/scripts/setupDb.js",
+    "start": "npm run dev",
+    "frontend": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend"
+  },
+  "keywords": [
+    "erp",
+    "school-management",
+    "react",
+    "nodejs",
+    "mysql"
+  ],
+  "author": "Campus 360 Team",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
